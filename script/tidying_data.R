@@ -158,7 +158,9 @@ filter( str_starts(SampleName, pattern = "STD"))
 
   
   # combine all tidied dataframes into one
-  Temp <- full_join(Alks_tidy_long, Obs_Field_NSW_long)
+  Temp <- full_join(Alks_tidy_long, Obs_Field_NSW_long) %>% 
+     filter(!is.na(Value))
+  
   NSW_Hydro1<- full_join(RepAug_tidy_long, asu_for_merging) 
   
   NSW_Hydro<-full_join(NSW_Hydro1, Temp) %>% 
