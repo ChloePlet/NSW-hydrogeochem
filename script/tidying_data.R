@@ -167,6 +167,6 @@ filter( str_starts(SampleName, pattern = "STD"))
      filter(!is.na(Value),str_detect(SampleName, "MX", negate = FALSE))
 
   
-     
+  write_csv(NSW_Hydro, path = "C:/Users/ple017/Dropbox/01_CSIRO-Earth Gases Flux postdoc/06-Trainings/Data school FOCUS round 2/FOCUS_week 4/NSW-hydrogeochem/results", na = "NA", append = FALSE, col_names = !append,
+            quote_escape = "double")
     
-  
